@@ -33,9 +33,9 @@ public class BinarySearchTree<E extends Comparable<E>> extends AbstractTree<E> {
                     current = current.right;
                 } else return false;
             }
-            if (e.compareTo(parent.element) < 0) {
+            if (e.compareTo(parent.element) < 0)
                 parent.left = createNewNode(e);
-            } else parent.right = createNewNode(e);
+             else parent.right = createNewNode(e);
         }
         size++;
         return true;
@@ -60,12 +60,18 @@ public class BinarySearchTree<E extends Comparable<E>> extends AbstractTree<E> {
     public void postorder() {
 
     }
+    @Override
+    public void inorder(){
+        inorder(root);
+    }
 
     public void inorder(TreeNode<E> root) {
+
         if (root == null)
             return;
             inorder(root.left);
         System.out.println(root.element + "");
+        inorder(root.right);
     }
 
         @Override
