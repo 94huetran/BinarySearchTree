@@ -7,7 +7,7 @@ public interface Tree<E> {
 
    public boolean delete(E e);
 
-   public String inorder();
+   public void inorder();
 
     public void preorder();
 
