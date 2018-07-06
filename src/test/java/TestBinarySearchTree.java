@@ -13,6 +13,7 @@ public class TestBinarySearchTree {
         tree.insert("Jones");
         tree.insert("Harry");
         int sort = tree.getSize();
+        tree.inorder();
         Assert.assertEquals(5, sort);
     }
 }
